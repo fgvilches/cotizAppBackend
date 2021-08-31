@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Cotizador {% endblock %}</h1>
+    <form method="POST">
+        <p>UF del dia: <input name="uf_dia" type="text" value="" /> (Valor en pesos)</p>
+        <p>Nombre del cliente: <input name="cliente_name" type=”text” value="" /></p>
+        <p>Dirección: <input name="cliente_dir" type=”text” value="" /></p>
+        <p>Teléfono: <input name="cliente_telefono" type=”text” value="" /></p>
+        <p>Producto: <select data-placeholder="tipo_prod" multiple class="chosen-select" name="tipo_prod">
+            <option value=""></option>
+            <option value="0">STANDAR</option>
+            <option value="1">PLAN 10</option>
+            <option value="2">PLAN 20</option>
+            <option value="3">PERPETUO</option>
+        </select></p>
+        <p>Sector: <input name="sector" type=”text” value="" /></p>
+        <p>Capacidad: <select data-placeholder="capacidad" multiple class="chosen-select" name="capacidad">
+            <option value=""></option>
+            <option value="0">1 CAPACIDAD</option>
+            <option value="1">2 PARA 4</option>
+            <option value="2">3 PARA 6</option>
+        </select></p>
+        <p>Valor necesidad inmediata: <input name="valor_n_inmediata" type=”text” value="" /> (En UF)</p>
+        <p>Valor compra anticipada: <input name="valor_compr_ant" type=”text” value="" /> (En UF)</p>
+        <p>Descuento pago al contado: <input name="dscto_contado" type=”text” value="" /></p>
+        <p>Otros descuentos: <input name="dscto_otro_num" type=”text” value="" /> (Especificar motivo en el próximo campo)</p>
+        <p>Motivo: <input name="dscto_otro_razon" type=”text” value="" /> </p>
+        <p>Total: <input name="total" type=”text” value="" /> (En UF)</p>
+        <p>Pie: <input name="pie" type=”text” value="" /> (En UF)</p>
+        <p>Periodo de restriccion: <input name="restriccion" type=”text” value="" /> (En meses)</p>
+        <p>UF por dia del periodo de restriccion: <input name="uf_por_dia" type=”text” value="" /> </p>
+        <p>Mantencion anual: <input name="mantencion_anual" type=”text” value="" /> (En UF) </p>
+        <p>Mantencion perpetua: <input name="mantencion_perpetua" type=”text” value="" /> (En UF) </p>
+        <p>Arancel de sepultacion: <input name="arancel_sep" type=”text” value="" /> (En UF) </p>
+        <p>Número de cuotas: <input name="n_cuotas" type=”text” value="" />  </p>
+        <p>Valor de la cuota: <input name="valor_cuota" type=”text” value="" /> (En UF) </p>
+        <input type="submit">
+    </form>
+
+{% endblock %}
+
