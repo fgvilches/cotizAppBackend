@@ -2,7 +2,6 @@ import os
 import platform
 import subprocess
 import time
-import webbrowser
 from github import Github
 from six.moves import urllib
 
@@ -115,4 +114,4 @@ def uploadOverleaf():
 
     time.sleep(2)
     final_url = 'https://www.overleaf.com/docs?snip_uri[]=' + str(uri) + '&snip_uri[]=https://github.com/bonatrash/cotis/raw/master/logo.png'
-    return webbrowser.open_new(final_url)
+    return final_url
