@@ -11,7 +11,6 @@ from six.moves import urllib
 
 def genCotizacion(uf_dia, cliente_name, cliente_dir,cliente_telefono,tipo_prod,sector,capacidad,valor_n_inmediata,valor_compr_ant, dscto_contado, dscto_otro_num, dscto_otro_razon,total,pie, restriccion, uf_por_dia, mantencion_anual, mantencion_perpetua, arancel_sep, n_cuotas,valor_cuota):
     coti = open('cotis.tex', 'r')
-    coti.readline(0)
     lineas = coti.readlines()
     timex = str(time.strftime("%d-%m-%Y", time.gmtime()))
     line = r'\textbf{NOMBRE: } ' + str(cliente_name) + r' & \color{white}---------------------------------- & \textbf{VALOR UF: } ' + str(uf_dia) + r'\\' + ' \n'
