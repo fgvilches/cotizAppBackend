@@ -80,7 +80,7 @@ def genCotizacion(uf_dia, cliente_name, cliente_dir,cliente_telefono,tipo_prod,s
 #genCotizacion(123,"Felipe Gonzalez","Polonia 2077",991071926,0,203,2,335,235,0,0,'n/a',335,35,2,3,0,0,7,84,2.25)
 
 def uploadOverleaf():
-    g = Github("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")
+    g = Github("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")
 
     with open('cotis.tex', 'r') as file:
         content = file.read()
